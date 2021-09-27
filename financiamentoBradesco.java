@@ -7,15 +7,14 @@ public class financiamentoBradesco {
         byte opcao;
         char continua = 'N';
 
+        System.out.println(" ============== Bradesco Financiamentos ============== \n ");
+
         do{
-            System.out.println(" ============== Financiamentos Bradesco ============== \n ");
-            
             System.out.println("Insira a opção desejada: \n");
             System.out.println("1 - Crédito Pessoal");
             System.out.println("2 - Crédito Imobiliário");
             System.out.println("3 - Crédito Empresarial");
             System.out.println("4 - Empréstimo Consignado");
-            
             
             opcao = Byte.parseByte(sc.nextLine());
 
@@ -37,27 +36,25 @@ public class financiamentoBradesco {
                 break;
             
                 default:
-                    System.out.println("Opção inválida!!");
+                    System.out.println(" *** Opção inválida!! *** ");
+                    System.out.println("Tente novamente inserindo uma opção válida. \n");
                 break;
             }
 
             if (opcao > 0 && opcao < 5){
                 do{
-                    System.out.print("Para voltar ao menu principal, digite 'V'. \n Para sair do sistema, digite 'S': ");
+                    System.out.print("Para voltar ao menu principal, digite 'V'. \nPara sair do sistema, digite 'S': \n");
                     continua = sc.nextLine().toUpperCase().charAt(0);
                 }while(continua!='V' && continua!='S');
             }
             if (continua == 'S'){
-                System.out.println("Obrigado(a) por usar o nosso sistema.");
-                System.out.println("\n Programa Finalizado!");
+                System.out.println("Obrigado(a) por o Bradesco Financiamentos.");
+                System.out.println("\nPrograma Finalizado!");
             }
         }while (opcao < 1 || opcao > 4 || continua == 'V');
     
         sc.close();    
          
     }
-    
-}
-
     
 }
